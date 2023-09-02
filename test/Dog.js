@@ -20,13 +20,6 @@ const {
       }
 
       describe("Mint", function () {
-        // describe("Validations", function () {
-        //   it("Should revert with the right error if called too soon", async function () {
-        //     const { dog,owner } = await loadFixture(deployFixture);
-        //     console.log("owner:",owner.address);
-        //     await expect(dog.mint()).not.to.be.reverted
-        //   });
-        // })
 
         describe("TokenIncrement", function () {
             it("Should revert with the right error if called too soon", async function () {
@@ -59,13 +52,6 @@ const {
                 await dog.mint(owner.address);
                 await dog.setBaseURI("www.baidu.com");
                 await expect(await dog.tokenURI(1)).to.equal("www.baidu.com");
-  
-                // const uri1 = await dog.tokenURI(1)
-                // console.log("box not open uri:",uri1);
-  
-                // await expect(await dog.openBox()).not.to.be.rejected;
-                // const uri2 = await dog.tokenURI(1)
-                // console.log("box open uri:",uri2);
             });
           })
 
